@@ -1,20 +1,9 @@
 version: '3'
 services:
   openssh_server:
-#    image: jeroenpeeters/docker-ssh
-#    container_name: openssh_server
-#    volumes:
-#      - /var/run/docker.sock:/var/run/docker.sock
-#      - ./authorized_keys:/authorized_keys
-#    environment:
-#      - FILTERS={\"name\":[\"^/openssh_server$$\"]}
-#      - AUTH_MECHANISM=noAuth
-#      - AUTHORIZED_KEYS=/authorized_keys
     build:
       context: ./
       dockerfile: ./Dockerfile
-#    volumes:
-#      - ./authorized_keys:/root/.ssh/authorized_keys
     ports:
       - "22:22"
     restart: always
