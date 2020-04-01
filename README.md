@@ -10,5 +10,6 @@ docker-compose up -d --build
 
 #### finally, connect to container with ssh
 ```bash
-ssh root@localhost
+ssh -p 2222 root@localhost
+ssh -p 2223 root@localhost
 ```
