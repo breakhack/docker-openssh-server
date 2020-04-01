@@ -1,13 +1,13 @@
 version: '3'
 services:
-  ubuntu_openssh_server:
+  ubuntu:
     build:
       context: ./
       dockerfile: ./ubuntu/Dockerfile
     ports:
       - "2222:22"
     restart: always
-  centos_openssh_server:
+  centos:
     build:
       context: ./
       dockerfile: ./centos/Dockerfile
